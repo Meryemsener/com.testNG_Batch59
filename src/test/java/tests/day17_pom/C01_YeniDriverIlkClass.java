@@ -1,4 +1,4 @@
-package day17_pom;
+package tests.day17_pom;
 import org.testng.annotations.Test;
 import utilities.Driver;
 

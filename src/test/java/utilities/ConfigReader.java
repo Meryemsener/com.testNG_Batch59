@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
+    //bu class i olusturmamiz gerekirse kopyala yapistir ile alip her yerde
+    //kullanabiliriz
     public static Properties properties;
 
     static{
@@ -28,5 +30,6 @@ public class ConfigReader {
           bu key'e ait value'u bize getirdi
          */
         return properties.getProperty(key);
+
     }
 }

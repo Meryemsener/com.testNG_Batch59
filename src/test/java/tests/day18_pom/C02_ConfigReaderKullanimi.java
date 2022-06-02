@@ -1,11 +1,19 @@
-package day18_pom;
-
+package tests.day18_pom;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.FacebookPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C02_ConfigReaderKullanimi {
+public class C02_ConfigReaderKullanimi{
+     /*
+       Bugune kadar TestBase classina extends ederek kullandigimiz
+       driver yerine bundan sonra Driver class'indan kullanacagimiz getDriver static
+       method'unu kullanacagiz
+       Driver.getDriver() ---->IN
+       driver----------->OUT
+        */
+
     @Test
     public void test01() {
         FacebookPage facebookPage=new FacebookPage();
@@ -23,5 +31,7 @@ public class C02_ConfigReaderKullanimi {
         Assert.assertTrue(facebookPage.girilemediYaziElementi.isDisplayed());
         // sayfayi kapatin
         Driver.closeDriver();
+
+
     }
 }
