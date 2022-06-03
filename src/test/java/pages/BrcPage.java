@@ -20,7 +20,7 @@ public class BrcPage {
 
     @FindBy(xpath="(//input[@class='form-control is-invalid'])[2]")
 
-    public WebElement passwprdTextBox;
+    public WebElement passwordTextBox;
 
     @FindBy(xpath="//*[@class='btn btn-primary']")
 

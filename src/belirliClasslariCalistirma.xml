@@ -11,7 +11,7 @@ xml formatinda yazmamizdir. -->
             <class name="tests.day17_pom.C01_YeniDriverIlkClass"></class>
         </classes>
     </test>
-
+<!-- sag tus yapinca run cikmiyorsa file a gidip kaydetmemiz gerekiyor-->
 </suite>
 
 

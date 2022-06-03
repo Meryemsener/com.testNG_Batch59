@@ -48,7 +48,7 @@ public class C04_DependsOnMethods extends TestBase {
         WebElement sonucYaziElementi= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         Assert.assertTrue(sonucYaziElementi.getText().contains("Nutella"));
     }
-    @Test
+    @Test(groups = {"group1,group2"})
     public void test04(){
         System.out.println("bak bu calisti");
     }

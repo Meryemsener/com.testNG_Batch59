@@ -8,10 +8,11 @@ import utilities.Driver;
 
 public class NegatiefLoginTest {
 
-    BrcPage brcPage = new BrcPage();
+    BrcPage brcPage;
     @Test
-    public void yanlisSifre() {
+    public void yanlisSifre() throws InterruptedException {
 
+        brcPage = new BrcPage();
 
         // Bir test method olustur positiveLoginTest()
 
@@ -19,13 +20,14 @@ public class NegatiefLoginTest {
 
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
         //login butonuna bas
+        Thread.sleep(3000);
         brcPage.ilkLoginButton.click();
 
         //test data user email: boss@bluerentalcars.com ,
         brcPage.emailTextBox.sendKeys(ConfigReader.getProperty("brcWrongEmailAdress"));
 
         //test data password : 54321
-        brcPage.passwprdTextBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
+        brcPage.passwordTextBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
         // login butonuna tiklayin
         brcPage.ikinciLoginButton.click();
 

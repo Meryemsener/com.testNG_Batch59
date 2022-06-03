@@ -1,18 +1,19 @@
-package tests.day19_smokeTest;
+package tests.day21_reusableMethods_HtmlReports;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.BrcPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class PozitiefLoginTest {
-
+public class C03_PozitiefLoginTestiRaporu extends TestBaseRapor  {
     BrcPage brcPage = new BrcPage();
     @Test
-    public void test01() {
+    public void positieveLoginTest() {
 
 
+        extentTest=extentReports.createTest("Pozitif Login","gecerli user name ve sifre ile login yapmali");
         // Bir test method olustur positiveLoginTest()
 
         //https://www.bluerentalcars.com/ adresine git

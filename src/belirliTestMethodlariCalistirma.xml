@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--Bir classta birden fazla method varsa ve hepsini calistirmak istiyorsak
+bunu class bazinda yapabiliriz, method secmeye gerek yoktur. Ama o classtaki bir kacini ya da birini
+calistirmak istiyorsak inclusieve yapiyoruz. Aksi durumda exclusieve yaiyoruz
+
+
+ONEMLI=> eger iki method birbirine dependsOnMethods ile bagliysa, birbirine
+bagli olan o methodlarin hepsi calisir
+-->
+<suite name="istenen methodlari calistirma" verbose="10"><!--hata mesajlari cok detayli gelsin istiyorsak
+            verbose un icine 10 yaziyoruz ve bize consol da daha detayli bilgi verir. 1 en az 10 en coktur-->
+    <test name="method">
+        <classes>
+            <class name="tests.day16_notations.C03_Priority">
+                <methods>
+                    <include name="amazon">
+
+                    </include>
+                </methods>
+            </class>
+            <class name="tests.day16_notations.C04_DependsOnMethods">
+                <methods>
+                    <include name="test02"></include><!--bu kod calismaz, -1 hatasi verir-->
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

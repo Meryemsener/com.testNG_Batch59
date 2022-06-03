@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="belirli gruplar">
+    <!--
+    xml dosyalar calsitiracaimiz suit test veya diger ecenekleri bir goreve gore gruplandirmak
+    icin de kullanilabilir. Orn bir smoke test yapacagiz ve icinde 20 tane test olsun.
+    Hepsini birden calistirmak mi calistirmak istediklerimizin basina isaret koyup
+    calistirmak mi daha kolay. Elbettte ki ikinci secenek. Tek tek xml dosyasina
+    tanimlamiyoruz, bunun yerine freamwork'te istedigimiz test methodlarini
+    istedigimiz gruplara dahil edebiliriz
+    Bunun icin once test methodlarimizi istedigimiz gruplara dahil eder
+    sonra xml dosyasinda
+
+    1-hangi gruplar calisacak/calismayacak
+    2-bu gruplar hangi package altinda aranacak
+
+    -->
+    <test name="belirling gruplar">
+        <groups>
+            <run>
+                <include name="group1">
+                    
+                </include>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day16_notations"></package>
+        </packages>
+    </test>
+</suite>
