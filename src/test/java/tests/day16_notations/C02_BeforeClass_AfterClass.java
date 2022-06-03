@@ -6,30 +6,43 @@ import org.testng.annotations.Test;
 import utilities.TestBase;
 
 public class C02_BeforeClass_AfterClass extends TestBase {
+    // JUnit'te @BeforeClass  ve @AfterClass notasyonuna sahip
+    // method'lar static olmak ZORUNDAYDI
+    // TestNG bu ZORUNLULUK'tan bizi kurtariyor
+
+    /*
+     TestNg bize daha fazla before ve after notasyonlari sunar
+     diger before/after notasyonlari tanimlayacagimiz
+     grup, test veya sut'den once ve sonra calisirlar
+     ileride xml dosyalari ile birlikte bunu gorecegiz
+     */
+
+
     @BeforeClass
-    public void beforeClass(){
-        System.out.println("before class");
+    public void beforeClassMethod(){
+        System.out.println("Before Class");
     }
 
     @AfterClass
-    public void afterClass(){
-        System.out.println("after class");
+    public void afterClassMethod(){
+        System.out.println("After Class");
     }
-
-
     @Test
-    public  void amazon(){
+    public void amazonTesti() {
         driver.get("https://www.amazon.com");
-
+        System.out.println(driver.getCurrentUrl());
     }
+
     @Test
-    public  void bestBuy(){
+    public void test02() {
         driver.get("https://www.bestbuy.com");
-
+        System.out.println(driver.getCurrentUrl());
     }
-    @Test
-    public  void techproedTesti(){
-        driver.get("https://www.techproeducation.com");
 
+
+    @Test
+    public void techproedTesti() {
+        driver.get("https://www.techproeducation.com");
+        System.out.println(driver.getCurrentUrl());
     }
 }

@@ -8,25 +8,21 @@ import utilities.Driver;
 public class BrcPage {
     public BrcPage(){
         PageFactory.initElements(Driver.getDriver(),this);
-
     }
-    @FindBy(xpath="//a[@class='btn btn-primary btn-sm']")
 
-    public WebElement ilkLoginButton;
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement ilkLoginButonu;
 
-    @FindBy(xpath="(//input[@class='form-control is-invalid'])[1]")
-
+    @FindBy(xpath = "//input[@name='email']")
     public WebElement emailTextBox;
 
-    @FindBy(xpath="(//input[@class='form-control is-invalid'])[2]")
-
+    @FindBy(xpath = "//input[@name='password']")
     public WebElement passwordTextBox;
 
-    @FindBy(xpath="//*[@class='btn btn-primary']")
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement ikinciLoginButonu;
 
-    public WebElement ikinciLoginButton;
 
-    @FindBy(id="dropdown-basic-button")
-
+    @FindBy(id = "dropdown-basic-button")
     public WebElement kullaniciProfilIsmi;
 }

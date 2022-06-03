@@ -27,14 +27,16 @@ public class C04_DependsOnMethods extends TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
+
     @AfterClass
     public void tearDown(){
         driver.close();
     }
+
     @Test
     public void test01(){
         // amazon anasayfaya gidelim
-        driver.get("https://www.ramazon1.com");
+        driver.get("https://www.amazon.com");
     }
     @Test (dependsOnMethods ="test01" , priority = 0)
     public void test02(){
@@ -48,8 +50,7 @@ public class C04_DependsOnMethods extends TestBase {
         WebElement sonucYaziElementi= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         Assert.assertTrue(sonucYaziElementi.getText().contains("Nutella"));
     }
-    @Test(groups = {"group1,group2"})
+    @Test(groups = {"grup1", "grup2"})
     public void test04(){
         System.out.println("bak bu calisti");
-    }
-}
+    }}
